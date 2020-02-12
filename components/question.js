@@ -14,8 +14,8 @@ class SampleQ extends Component {
         super(props);
 
         this.state = {
-            showQuestion: false, // tracks visibility of first modal (the question modal in this component)
-            showFeedback: false // tracks visibility of second modal (the feedback modal in other component)
+            showQuestion: false, // tracks visibility of first modal (the question modal)
+            showFeedback: false // tracks visibility of second modal (the feedback modal)
         };
 
         this.handleShow = () => {
@@ -26,7 +26,11 @@ class SampleQ extends Component {
             this.setState({ showQuestion: false });
         };
 
-        this.submitForm = () => {
+        this.submitForm = (event) => {
+            event.preventDefault();
+
+            console.log(this.state.showFeedback);
+
             this.setState({
                 showQuestion: false, // close question modal
                 showFeedback: true, // should open Feedback modal
@@ -65,13 +69,13 @@ class SampleQ extends Component {
                                 answer={this.props.specA}
                                 handleClick={this.submitForm}
                             />
-                            <Feedback
-                                showModal={this.state.showFeedback}
-                                onSubmit={this.closeFeedback}
-                            />
                         </div>
                     </Modal.Body>
                 </Modal>
+                <Feedback
+                    showModal={this.state.showFeedback}
+                    onSubmit={this.closeFeedback}
+                />
             </>
         );
     }

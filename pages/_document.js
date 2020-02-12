@@ -1,21 +1,22 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import Navigation from '../components/Navbar';
 import React from "react";
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
+    static async getInitialProps(ctx) {
+        const initialProps = await Document.getInitialProps(ctx)
+        return { ...initialProps }
+    }
+
     render() {
         return (
-            <html>
+            <Html>
                 <Head>
-                    <title>
-                        Ruthvik Konda
-                    </title>
                     <link
                         rel ="icon"
                         type="image/png"
                         href='../static/favicon.ico'
                     />
-                    <Navigation/>
                     <link
                         rel="stylesheet"
                         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,11 +24,15 @@ export default class MyDocument extends Document {
                         crossOrigin="anonymous"
                     />
                 </Head>
+                <Navigation/>
                 <body>
-                    <Main/>
-                    <NextScript/>
+                    <Main />
+                    <NextScript />
                 </body>
-            </html>
-        );
+            </Html>
+        )
     }
 }
+
+export default MyDocument
+

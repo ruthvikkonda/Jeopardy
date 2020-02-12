@@ -1,10 +1,9 @@
 import '../scss/style.scss';
-import React from 'react';
+import React from "react";
+import Layout from '../components/layout';
 
-const Index = () => (
-  <p1>
-      hey
-  </p1>
-);
-
-export default Index;
+export default () => (
+    <div>
+        <Layout title="Ruthvik Konda"/>
+    </div>
+)

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Table from "react-bootstrap/Table";
 import SampleQ from '../components/question.js';
 import css from '../scss/style.scss';
+import Layout from '../components/layout';
 
 export default class extends Component {
     static getInitialProps({query: {categories, questions, answers}}) {
@@ -47,7 +48,9 @@ export default class extends Component {
 
     render() {
         return (
-            <div >
+            <div>
+                <Layout title="Jeopardy!"/>
+
                 <Table striped bordered hover variant = "dark" className={css.table}>
                     {this.createTable()}
                 </Table>

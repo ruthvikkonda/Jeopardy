@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 class UserInput extends Component {
     constructor(props) {
@@ -18,14 +18,13 @@ class UserInput extends Component {
                         Answer
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control type="text" placeholder="Enter Here"/>
+                        <Form.Control type="text" placeholder="Enter Here" />
                     </Col>
                 </Form.Group>
                 <div>
-                    <Button
-                        variant="primary"
-                        onClick={this.props.handleClick}
-                    >Submit</Button>
+                    <Button variant="primary" onClick={this.props.handleClick}>
+                        Submit
+                    </Button>
                 </div>
             </Form>
         );

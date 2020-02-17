@@ -4,7 +4,7 @@ import React from "react";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
+        const initialProps = await Document.getInitialProps(ctx);
         return { ...initialProps }
     }
 
@@ -24,7 +24,6 @@ class MyDocument extends Document {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <Navigation/>
                 <body>
                     <Main />
                     <NextScript />

@@ -4,6 +4,9 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import UserInput from './userInput.js';
 import Feedback from "./feedback/feedback";
+import Backdrop from "./backdrop";
+import styles from '../scss/backdrop.scss';
+import Layout from '../components/layout';
 
 class SampleQ extends Component {
     static getInitialProps({query: {amount, question, answer}}) {
@@ -15,21 +18,24 @@ class SampleQ extends Component {
 
         this.state = {
             showQuestion: false, // tracks visibility of first modal (the question modal)
-            showFeedback: false // tracks visibility of second modal (the feedback modal)
+            showFeedback: false, // tracks visibility of second modal (the feedback modal)
         };
 
         this.handleShow = () => {
+            // show question and the backdrop when the user clicks a cell on the table
             this.setState({ showQuestion: true });
+            this.props.showBackdrop();
         };
 
         this.handleHide = () => {
             this.setState({ showQuestion: false });
+            this.props.hideBackdrop();
         };
 
-        this.submitForm = (event) => {
+        this.submitForm = event => {
             event.preventDefault();
 
-            console.log(this.state.showFeedback);
+            this.props.hideBackdrop(); // take down stars backdrop
 
             this.setState({
                 showQuestion: false, // close question modal
@@ -38,8 +44,10 @@ class SampleQ extends Component {
         };
 
         this.closeFeedback = () => {
-            this.setState( { showFeedback: false }); // close Feedback modal
-        }
+            // close Feedback modal and close backdrop so that it goes back to the table
+            this.setState( { showFeedback: false });
+            this.props.hideBackdrop();
+        };
     }
 
     render() {
@@ -54,6 +62,8 @@ class SampleQ extends Component {
                     onHide={this.handleHide}
                     dialogClassName="modal-90w"
                     aria-labelledby="example-custom-modal-styling-title"
+                    backdrop={false}
+                    className={styles.modal}
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-custom-modal-styling-title">
@@ -74,7 +84,7 @@ class SampleQ extends Component {
                 </Modal>
                 <Feedback
                     showModal={this.state.showFeedback}
-                    onSubmit={this.closeFeedback}
+                    handleHide={this.closeFeedback}
                 />
             </>
         );

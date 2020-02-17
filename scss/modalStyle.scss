@@ -1,86 +1,50 @@
-.Feedback {
-  .modalDialog {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%) !important;
-  }
-
-  .modalBody {
-    font-family: 'Varela Round', sans-serif;
-  }
-  .modalConfirm {
-    color: #636363;
-    width: 450px;
-  }
-  .modalConfirm .modalContent {
-    padding: 20px;
-    border-radius: 5px;
-    border: none;
-  }
-  .modalConfirm .modalHeader {
-    border-bottom: none;
-    position: relative;
-  }
-  .modalConfirm h4 {
-    text-align: center;
-    font-size: 45px;
-    margin: 30px 0 15px;
-  }
-  .modalConfirm .formControl, .modalConfirm .btn {
-    min-height: 50px;
-    border-radius: 3px;
-  }
-  .modalConfirm .close {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-  }
-  .modalConfirm .modalFooter {
-    border: none;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 13px;
-  }
-  .modalConfirm .iconBox {
-    color: #fff;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: -140px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    z-index: 9;
-    background: #82ce34;
-    padding: 5px;
-    text-align: center;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  }
-  .modalConfirm .iconBox i {
-    font-size: 58px;
-    position: relative;
-    top: 3px;
-  }
-  .modalConfirm.modalDialog {
-    margin-top: 80px;
-  }
-  .modalConfirm .btn {
-    color: #fff;
-    border-radius: 4px;
-    background: #82ce34;
-    text-decoration: none;
-    transition: all 0.4s;
-    line-height: normal;
-    border: none;
-  }
-  .modalConfirm .btn:hover, .modalConfirm .btn:focus {
-    background: #6fb32b;
-    outline: none;
-  }
-  .triggerBtn {
-    display: inline-block;
-    margin: 100px auto;
-  }
+.modal {
+  color: #636363;
+  width: 300px;
+  height: 300px;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  z-index: 9999;
+}
+h4 {
+  text-align: center;
+  font-size: 30px;
+  margin: 30px 0 15px;
+}
+.modalConfirmIconBox {
+  color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -110px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #82ce34;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.button {
+  color: #fff;
+  background: #82ce34;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.modalBody {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
 }

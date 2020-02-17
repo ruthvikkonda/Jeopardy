@@ -3,8 +3,25 @@ import Table from "react-bootstrap/Table";
 import SampleQ from '../components/question.js';
 import css from '../scss/style.scss';
 import Layout from '../components/layout';
+import NavigationBar from "../components/Navbar/index";
 
 export default class extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showBackground: false
+        };
+
+        this.showBackground = () => {
+            this.setState({ showBackground: true });
+        };
+
+        this.hideBackground = () => {
+            this.setState({ showBackground: false });
+        }
+    }
+
     static getInitialProps({query: {categories, questions, answers}}) {
         return {postCs: categories, allQs: questions, allAs: answers}
     }
@@ -34,6 +51,8 @@ export default class extends Component {
                                 amount={i}
                                 question={this.props.allQs[(index)].title}
                                 answer={this.props.allAs[(index)].title}
+                                showBackdrop={this.showBackground}
+                                hideBackdrop={this.hideBackground}
                             />
                         </div>
                     </td>);
@@ -47,12 +66,13 @@ export default class extends Component {
     };
 
     render() {
+        let data = this.createTable();
+
         return (
             <div>
-                <Layout title="Jeopardy!"/>
-
-                <Table striped bordered hover variant = "dark" className={css.table}>
-                    {this.createTable()}
+                <Layout showBackground={this.state.showBackground} title="lllll" />
+                <Table striped bordered hover variant = "dark" className={css.table} hide={true}>
+                    {data}
                 </Table>
             </div>
         )

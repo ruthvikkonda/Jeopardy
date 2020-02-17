@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-class Navigation extends Component{
+class NavigationBar extends Component{
     render(){
         return (
             <Navbar bg="light" variant="light">
@@ -26,4 +26,4 @@ class Navigation extends Component{
     }
 }
 
-export default Navigation;
+export default NavigationBar;

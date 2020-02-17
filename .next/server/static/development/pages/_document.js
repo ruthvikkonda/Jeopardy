@@ -122,18 +122,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Navigation =
+var NavigationBar =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Navigation, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(NavigationBar, _Component);
 
-  function Navigation() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Navigation);
+  function NavigationBar() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, NavigationBar);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Navigation).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(NavigationBar).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Navigation, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(NavigationBar, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -161,10 +161,10 @@ function (_Component) {
     }
   }]);
 
-  return Navigation;
+  return NavigationBar;
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Navigation);
+/* harmony default export */ __webpack_exports__["default"] = (NavigationBar);
 
 /***/ }),
 
@@ -2328,7 +2328,7 @@ function (_Document) {
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
         integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
         crossOrigin: "anonymous"
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["Main"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["NextScript"], null)));
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["Main"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_8__["NextScript"], null)));
     }
   }], [{
     key: "getInitialProps",

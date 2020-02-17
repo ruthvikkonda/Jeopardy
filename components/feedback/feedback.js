@@ -7,39 +7,43 @@ import styles from '../../scss/modalStyle.scss';
 import Button from 'react-bootstrap/Button';
 
 class Feedback extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <Modal
                 show={this.props.showModal}
                 onHide={this.props.handleHide}
-                className="Feedback"
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+                className={styles.modal}
             >
-                <Modal.Dialog> {/* PROBLEM HERE WITH STYLES/CSS-MODULES: style={styles.modalDialog} */}
-                    <Modal.Body>
-                        <Modal.Body>
-                             <IconContext.Provider
-                                 value={{ size: '70px', className: 'global-class-name' }}
-                             >
-                                 <div>
-                                     <AiFillCheckCircle />
-                                 </div>
-                             </IconContext.Provider>
-                            <h4 className="mx-auto">Congratulations!</h4>
-                        </Modal.Body>
-                        <Modal.Body>
-                            <p className="text-center">That was the correct answer.</p>
-                        </Modal.Body>
-                        <Modal.Body>
-                            <Button
-                                className="btn btn-success btn-block"
-                                data-dismiss="modal"
-                                onClick={this.props.handleHide}
-                            >
-                                OK
-                            </Button>
-                        </Modal.Body>
-                    </Modal.Body>
-                </Modal.Dialog>
+                <Modal.Body className={styles.modalBody}>
+                     <IconContext.Provider
+                         value={{
+                             color: '#fff',
+                             size: '70px',
+                             className: styles.modalConfirmIconBox,
+                         }}
+                     >
+                         <div>
+                             <AiFillCheckCircle />
+                         </div>
+                     </IconContext.Provider>
+                    <h4 className="mx-auto">Congratulations!</h4>
+                    <p>That was the correct answer.</p>
+                    <Button
+                        className={styles.button}
+                        variant="success"
+                        block
+                        size="lg"
+                        onClick={this.props.handleHide}
+                    >
+                        OK
+                    </Button>
+                </Modal.Body>
             </Modal>
         );
     }

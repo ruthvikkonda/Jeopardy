@@ -20,20 +20,19 @@ class Feedback extends Component {
                 aria-labelledby="example-custom-modal-styling-title"
                 className={styles.modal}
             >
+                <IconContext.Provider
+                    value={{
+                        color: '#fff',
+                        size: '70px',
+                        className: styles.modalConfirmIconBox,
+                    }}
+                >
+                    <AiFillCheckCircle />
+                </IconContext.Provider>
+
                 <Modal.Body className={styles.modalBody}>
-                     <IconContext.Provider
-                         value={{
-                             color: '#fff',
-                             size: '70px',
-                             className: styles.modalConfirmIconBox,
-                         }}
-                     >
-                         <div>
-                             <AiFillCheckCircle />
-                         </div>
-                     </IconContext.Provider>
-                    <h4 className="mx-auto">Congratulations!</h4>
-                    <p>That was the correct answer.</p>
+                    <h4 className={styles.h4}>Congratulations!</h4>
+                    <p className={styles.p}>That was the correct answer.</p>
                     <Button
                         className={styles.button}
                         variant="success"

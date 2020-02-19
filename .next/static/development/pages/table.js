@@ -211,17 +211,19 @@ function (_Component) {
         dialogClassName: "modal-90w",
         "aria-labelledby": "example-custom-modal-styling-title",
         className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modal
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, {
-        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalBody
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons__WEBPACK_IMPORTED_MODULE_8__["IconContext"].Provider, {
         value: {
           color: '#fff',
           size: '70px',
           className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalConfirmIconBox
         }
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_7__["AiFillCheckCircle"], null))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
-        className: "mx-auto"
-      }, "Congratulations!"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "That was the correct answer."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_7__["AiFillCheckCircle"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, {
+        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalBody
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
+        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.h4
+      }, "Congratulations!"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.p
+      }, "That was the correct answer."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
         className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.button,
         variant: "success",
         block: true,
@@ -450,8 +452,7 @@ function (_Component) {
         onHide: this.handleHide,
         dialogClassName: "modal-90w",
         "aria-labelledby": "example-custom-modal-styling-title",
-        backdrop: false,
-        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_11___default.a.modal
+        backdrop: false
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Header, {
         closeButton: true
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Title, {
@@ -459,10 +460,10 @@ function (_Component) {
       }, "Question")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, this.props.question), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_userInput_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
         answer: this.props.specA,
         handleClick: this.submitForm
-      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], {
         showModal: this.state.showFeedback,
         handleHide: this.closeFeedback
-      }));
+      })));
     }
   }]);
 
@@ -21085,7 +21086,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftable&absolutePagePath=%2FUsers%2FRuthvik%2FDownloads%2FJeopardy%2Fpages%2Ftable.js ***!
   \**********************************************************************************************************************************/
@@ -21108,5 +21109,5 @@ module.exports = dll_72e8c52a91ebf759c92a;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]));;
+},[[3,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=table.js.map

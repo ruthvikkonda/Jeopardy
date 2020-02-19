@@ -63,7 +63,6 @@ class SampleQ extends Component {
                     dialogClassName="modal-90w"
                     aria-labelledby="example-custom-modal-styling-title"
                     backdrop={false}
-                    className={styles.modal}
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-custom-modal-styling-title">
@@ -81,11 +80,11 @@ class SampleQ extends Component {
                             />
                         </div>
                     </Modal.Body>
+                    <Feedback
+                        showModal={this.state.showFeedback}
+                        handleHide={this.closeFeedback}
+                    />
                 </Modal>
-                <Feedback
-                    showModal={this.state.showFeedback}
-                    handleHide={this.closeFeedback}
-                />
             </>
         );
     }

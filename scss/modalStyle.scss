@@ -1,20 +1,17 @@
 .modal {
   color: #636363;
-  width: 325px;
-  height: 100%;
-  margin: auto;
-  position: relative;
-  //max-width: 500px;
-  //position: absolute;
-  //top: 50%;
-  //left: 50%;
-  margin-top: 50px;
-  //margin-left: -150px;.
+  width: 350px;
+  //height:
+  left: 35%;
+  margin-top: 60px;
+  max-width: 100%; // accounts for smaller screens. adjusts for mobile etc..
+  max-height: 100%; // accounts for smaller screens. adjusts for mobile etc..
+
   .modal-dialog {
     margin-top: 28px;
   }
+
   .modalBody {
-    margin-top: 50px;
     padding: 20px;
     border-radius: 5px;
     border: none;
@@ -23,7 +20,6 @@
 .h4 {
   text-align: center;
   font-size: 26px;
-  margin-top: -25px;
 }
 .p {
   text-align: center;

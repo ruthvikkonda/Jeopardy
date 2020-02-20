@@ -237,6 +237,18 @@ function (_Component) {
         className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
       })));
     }
   }]);
@@ -555,10 +567,10 @@ function (_Component) {
       }, "Question")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, this.props.question), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_userInput_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
         answer: this.props.specA,
         handleClick: this.submitForm
-      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], {
         showModal: this.state.showFeedback,
         handleHide: this.closeFeedback
-      })));
+      }));
     }
   }]);
 

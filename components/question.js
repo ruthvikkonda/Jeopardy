@@ -80,11 +80,11 @@ class SampleQ extends Component {
                             />
                         </div>
                     </Modal.Body>
-                    <Feedback
-                        showModal={this.state.showFeedback}
-                        handleHide={this.closeFeedback}
-                    />
                 </Modal>
+                <Feedback
+                    showModal={this.state.showFeedback}
+                    handleHide={this.closeFeedback}
+                />
             </>
         );
     }

@@ -18,6 +18,12 @@ export default class Backdrop extends Component {
                     <div className={styles.shooting_star}></div>
                     <div className={styles.shooting_star}></div>
                     <div className={styles.shooting_star}></div>
+                    <div className={styles.shooting_star}></div>
+                    <div className={styles.shooting_star}></div>
+                    <div className={styles.shooting_star}></div>
+                    <div className={styles.shooting_star}></div>
+                    <div className={styles.shooting_star}></div>
+                    <div className={styles.shooting_star}></div>
                 </div>
             </div>
         );

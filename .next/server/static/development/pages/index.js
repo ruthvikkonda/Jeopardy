@@ -237,6 +237,18 @@ function (_Component) {
         className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_6___default.a.shooting_star
       })));
     }
   }]);

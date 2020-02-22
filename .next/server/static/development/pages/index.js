@@ -93,6 +93,19 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Navbar/Navbar.scss":
+/*!***************************************!*\
+  !*** ./components/Navbar/Navbar.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"nav": "nav___3aCSb"
+};
+
+/***/ }),
+
 /***/ "./components/Navbar/index.js":
 /*!************************************!*\
   !*** ./components/Navbar/index.js ***!
@@ -113,6 +126,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Navbar */ "react-bootstrap/Navbar");
 /* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Navbar_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Navbar.scss */ "./components/Navbar/Navbar.scss");
+/* harmony import */ var _Navbar_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_Navbar_scss__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -138,7 +154,8 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default.a, {
         bg: "light",
-        variant: "light"
+        variant: "light",
+        className: _Navbar_scss__WEBPACK_IMPORTED_MODULE_8___default.a.nav
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default.a.Brand, {
         href: "/"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {

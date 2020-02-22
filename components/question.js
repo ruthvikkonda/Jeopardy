@@ -3,10 +3,8 @@ import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import UserInput from './userInput.js';
-import Feedback from "./feedback/feedback";
-import Backdrop from "./backdrop";
-import styles from '../scss/backdrop.scss';
-import Layout from '../components/layout';
+import CorrectAnswer from "./feedback/correctAnswer";
+import WrongAnswer from "./feedback/wrongAnswer";
 
 class SampleQ extends Component {
     static getInitialProps({query: {amount, question, answer}}) {
@@ -39,12 +37,12 @@ class SampleQ extends Component {
 
             this.setState({
                 showQuestion: false, // close question modal
-                showFeedback: true, // should open Feedback modal
+                showFeedback: true, // should open CorrectAnswer modal
             });
         };
 
         this.closeFeedback = () => {
-            // close Feedback modal and close backdrop so that it goes back to the table
+            // close feedback modal and close backdrop so that it goes back to the table
             this.setState( { showFeedback: false });
             this.props.hideBackdrop();
         };
@@ -75,15 +73,20 @@ class SampleQ extends Component {
                         </p>
                         <div>
                             <UserInput
-                                answer={this.props.specA}
                                 handleClick={this.submitForm}
                             />
                         </div>
                     </Modal.Body>
                 </Modal>
-                <Feedback
+                {/* correct answer scenario and then wrong answer scenario (display modals) (ternary operator) */
+                /* don't use if else. maybe create parent modal component and then extend it to both feedback*/}
+
+                {/* rendering modal components here so I should compare whether user answered correctly here
+                so pass user input value from UserInput back to here and check if it matches specA*/}
+                <WrongAnswer
                     showModal={this.state.showFeedback}
                     handleHide={this.closeFeedback}
+                    amntMoney={this.props.amount}
                 />
             </>
         );

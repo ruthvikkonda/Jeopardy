@@ -1,0 +1,49 @@
+@mixin modal {
+  color: #636363;
+  width: 365px;
+  left: 35%;
+  top: 8%;
+
+  font-family: Open Sans, sans-serif;
+
+  max-width: 100%; // accounts for smaller screens. adjusts for mobile etc..
+  max-height: 100%; // accounts for smaller screens. adjusts for mobile etc..
+
+  .modal-dialog {
+    margin-top: 28px;
+  }
+}
+@mixin h4 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: -28px; // moves title closer up to the icon at the top
+  margin-bottom: 27px;
+}
+@mixin p {
+  text-align: center;
+  font-size: 16.5px;
+  margin-top: 23px; // moves body text farther down below title
+}
+@mixin modalConfirmIconBox($color: #32CD32) {
+  position: relative;
+  color: #fff;
+  top: -28px;
+  margin: auto;
+  border-radius: 50%;
+  background: $color;
+  padding: 1px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+@mixin button($color: #32CD32) {
+  color: #fff;
+  background: $color;
+  text-decoration: none;
+  //transition: all 0.4s;
+  line-height: normal;
+  border: none;
+  outline: none;
+  border-radius: 23px;
+  font-size: 16px;
+
+  margin: 29px 0px 12px 0px; // top 25px, right 0px, bottom 15px, left 0px
+}

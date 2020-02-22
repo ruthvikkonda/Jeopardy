@@ -3,7 +3,6 @@ import Table from "react-bootstrap/Table";
 import SampleQ from '../components/question.js';
 import css from '../scss/style.scss';
 import Layout from '../components/layout';
-import NavigationBar from "../components/Navbar/index";
 
 export default class extends Component {
     constructor(props) {

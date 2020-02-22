@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import css from './Navbar.scss';
 
 class NavigationBar extends Component{
     render(){
         return (
-            <Navbar bg="light" variant="light">
+            <Navbar bg="light" variant="light" className={css.nav}>
                 <Navbar.Brand href="/">
                     <img
                         alt = ""

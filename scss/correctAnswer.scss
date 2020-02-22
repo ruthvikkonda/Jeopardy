@@ -1,0 +1,21 @@
+@import 'modal.scss';
+
+.modal {
+  @include modal;
+}
+.h4 {
+  @include h4;
+}
+.p {
+  @include p;
+}
+.modalConfirmIconBox {
+  @include modalConfirmIconBox();
+}
+.button {
+  @include button();
+}
+
+.button:hover {
+  background-color: #119A3A;
+}

@@ -93,6 +93,19 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Navbar/Navbar.scss":
+/*!***************************************!*\
+  !*** ./components/Navbar/Navbar.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"nav": "nav___3aCSb"
+};
+
+/***/ }),
+
 /***/ "./components/Navbar/index.js":
 /*!************************************!*\
   !*** ./components/Navbar/index.js ***!
@@ -113,6 +126,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Navbar */ "react-bootstrap/Navbar");
 /* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Navbar_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Navbar.scss */ "./components/Navbar/Navbar.scss");
+/* harmony import */ var _Navbar_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_Navbar_scss__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -138,7 +154,8 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default.a, {
         bg: "light",
-        variant: "light"
+        variant: "light",
+        className: _Navbar_scss__WEBPACK_IMPORTED_MODULE_8___default.a.nav
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_7___default.a.Brand, {
         href: "/"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -260,10 +277,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./components/feedback/feedback.js":
-/*!*****************************************!*\
-  !*** ./components/feedback/feedback.js ***!
-  \*****************************************/
+/***/ "./components/feedback/correctAnswer.js":
+/*!**********************************************!*\
+  !*** ./components/feedback/correctAnswer.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -282,8 +299,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_ai__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_icons_ai__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-icons */ "react-icons");
 /* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_icons__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../scss/modalStyle.scss */ "./scss/modalStyle.scss");
-/* harmony import */ var _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../scss/correctAnswer.scss */ "./scss/correctAnswer.scss");
+/* harmony import */ var _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/Button */ "react-bootstrap/Button");
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__);
 
@@ -298,40 +315,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Feedback =
+var CorrectAnswer =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Feedback, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(CorrectAnswer, _Component);
 
-  function Feedback(props) {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Feedback);
+  function CorrectAnswer() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CorrectAnswer);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Feedback).call(this, props));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CorrectAnswer).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Feedback, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CorrectAnswer, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a, {
         show: this.props.showModal,
         onHide: this.props.handleHide,
-        dialogClassName: "modal-90w",
-        "aria-labelledby": "example-custom-modal-styling-title",
-        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modal
+        className: _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modal
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons__WEBPACK_IMPORTED_MODULE_8__["IconContext"].Provider, {
         value: {
           color: '#fff',
           size: '70px',
-          className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalConfirmIconBox
+          className: _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalConfirmIconBox
         }
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_7__["AiFillCheckCircle"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, {
-        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalBody
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
-        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.h4
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons_ai__WEBPACK_IMPORTED_MODULE_7__["AiFillCheckCircle"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
+        className: _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.h4
       }, "Congratulations!"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.p
-      }, "That was the correct answer."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
-        className: _scss_modalStyle_scss__WEBPACK_IMPORTED_MODULE_9___default.a.button,
+        className: _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.p
+      }, "That was the correct answer."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        style: {
+          marginTop: "-6px"
+        },
+        className: _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.p
+      }, "You have been rewarded $", this.props.amntMoney, "00."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
+        className: _scss_correctAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.button,
         variant: "success",
         block: true,
         size: "lg",
@@ -340,10 +358,98 @@ function (_Component) {
     }
   }]);
 
-  return Feedback;
+  return CorrectAnswer;
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Feedback);
+/* harmony default export */ __webpack_exports__["default"] = (CorrectAnswer);
+
+/***/ }),
+
+/***/ "./components/feedback/wrongAnswer.js":
+/*!********************************************!*\
+  !*** ./components/feedback/wrongAnswer.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Modal */ "react-bootstrap/Modal");
+/* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_icons_io__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-icons/io */ "react-icons/io");
+/* harmony import */ var react_icons_io__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_icons_io__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-icons */ "react-icons");
+/* harmony import */ var react_icons__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_icons__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../scss/wrongAnswer.scss */ "./scss/wrongAnswer.scss");
+/* harmony import */ var _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/Button */ "react-bootstrap/Button");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__);
+
+
+
+
+
+
+
+
+
+
+
+
+var WrongAnswer =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(WrongAnswer, _Component);
+
+  function WrongAnswer(props) {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, WrongAnswer);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(WrongAnswer).call(this, props));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(WrongAnswer, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        show: this.props.showModal,
+        onHide: this.props.handleHide,
+        className: _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modal
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons__WEBPACK_IMPORTED_MODULE_8__["IconContext"].Provider, {
+        value: {
+          color: '#fff',
+          size: '70px',
+          className: _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.modalConfirmIconBox
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_icons_io__WEBPACK_IMPORTED_MODULE_7__["IoIosCloseCircle"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
+        className: _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.h4
+      }, "Incorrect."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.p
+      }, "That was the wrong answer."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        style: {
+          marginTop: "-6px"
+        },
+        className: _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.p
+      }, "You have lost $", this.props.amntMoney, "00."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
+        className: _scss_wrongAnswer_scss__WEBPACK_IMPORTED_MODULE_9___default.a.button,
+        variant: "danger",
+        block: true,
+        size: "lg",
+        onClick: this.props.handleHide
+      }, "OK")));
+    }
+  }]);
+
+  return WrongAnswer;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (WrongAnswer);
 
 /***/ }),
 
@@ -452,13 +558,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Button */ "react-bootstrap/Button");
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _userInput_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./userInput.js */ "./components/userInput.js");
-/* harmony import */ var _feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./feedback/feedback */ "./components/feedback/feedback.js");
-/* harmony import */ var _backdrop__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./backdrop */ "./components/backdrop.js");
-/* harmony import */ var _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../scss/backdrop.scss */ "./scss/backdrop.scss");
-/* harmony import */ var _scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_scss_backdrop_scss__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-
-
+/* harmony import */ var _feedback_correctAnswer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./feedback/correctAnswer */ "./components/feedback/correctAnswer.js");
+/* harmony import */ var _feedback_wrongAnswer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./feedback/wrongAnswer */ "./components/feedback/wrongAnswer.js");
 
 
 
@@ -530,13 +631,13 @@ function (_Component) {
       _this.setState({
         showQuestion: false,
         // close question modal
-        showFeedback: true // should open Feedback modal
+        showFeedback: true // should open CorrectAnswer modal
 
       });
     };
 
     _this.closeFeedback = function () {
-      // close Feedback modal and close backdrop so that it goes back to the table
+      // close feedback modal and close backdrop so that it goes back to the table
       _this.setState({
         showFeedback: false
       });
@@ -565,11 +666,11 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Title, {
         id: "example-custom-modal-styling-title"
       }, "Question")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, this.props.question), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_userInput_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        answer: this.props.specA,
         handleClick: this.submitForm
-      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_wrongAnswer__WEBPACK_IMPORTED_MODULE_10__["default"], {
         showModal: this.state.showFeedback,
-        handleHide: this.closeFeedback
+        handleHide: this.closeFeedback,
+        amntMoney: this.props.amount
       }));
     }
   }]);
@@ -2885,8 +2986,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../scss/style.scss */ "./scss/style.scss");
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_Navbar_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Navbar/index */ "./components/Navbar/index.js");
-
 
 
 
@@ -3022,21 +3121,20 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./scss/modalStyle.scss":
-/*!******************************!*\
-  !*** ./scss/modalStyle.scss ***!
-  \******************************/
+/***/ "./scss/correctAnswer.scss":
+/*!*********************************!*\
+  !*** ./scss/correctAnswer.scss ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = {
-	"modal": "modal___3VWN0",
-	"modal-dialog": "modal-dialog___1Ar9v",
-	"modalBody": "modalBody___19DC_",
-	"h4": "h4___3iBWP",
-	"p": "p___3Y8YL",
-	"modalConfirmIconBox": "modalConfirmIconBox___30Kqz",
-	"button": "button___3sPcB"
+	"modal": "modal___7Qfet",
+	"modal-dialog": "modal-dialog___2xlBj",
+	"h4": "h4___11rvc",
+	"p": "p___2Ky2k",
+	"modalConfirmIconBox": "modalConfirmIconBox___2BR5T",
+	"button": "button___RNShi"
 };
 
 /***/ }),
@@ -3050,6 +3148,24 @@ module.exports = {
 
 module.exports = {
 	"table": "table___3GVIu"
+};
+
+/***/ }),
+
+/***/ "./scss/wrongAnswer.scss":
+/*!*******************************!*\
+  !*** ./scss/wrongAnswer.scss ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"modal": "modal___2xbmU",
+	"modal-dialog": "modal-dialog___3kWbT",
+	"h4": "h4___3UHjb",
+	"p": "p___2HnHw",
+	"modalConfirmIconBox": "modalConfirmIconBox___2uvIl",
+	"button": "button___2sx12"
 };
 
 /***/ }),
@@ -3371,6 +3487,17 @@ module.exports = require("react-icons");
 /***/ (function(module, exports) {
 
 module.exports = require("react-icons/ai");
+
+/***/ }),
+
+/***/ "react-icons/io":
+/*!*********************************!*\
+  !*** external "react-icons/io" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-icons/io");
 
 /***/ }),
 

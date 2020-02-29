@@ -1,3 +1,2 @@
 # Jeopardy
-Server Rendered Website built using Node.js, Express.js, MySQL, and Next.js (framework for React.js)
-
+Server Rendered Website built using Node.js, Express.js, MySQL, React, and Next.js

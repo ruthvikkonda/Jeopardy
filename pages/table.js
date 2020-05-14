@@ -36,26 +36,31 @@ export default class extends Component {
 
         table.push(<thead> <tr> {cats} </tr> </thead>);
 
-        let index = 0;
+        let questionIndex = 0;
         // Outer loop to create parent
         for (let i = 1; i < 6; i++) {
             let children = [];
 
             //Inner loop to create children
             for (let j = 1; j < 7; j++) {
+                /* I load in questions organized by $ value so answers don't correspond to same index
+                   So I use the id of the current question to identify its appropriate answer
+                */
+                let answerIndex = this.props.allQs[questionIndex].id - 1;
+
                 children.push(
                     <td>
                         <div>
                             <SampleQ
                                 amount={i}
-                                question={this.props.allQs[(index)].title}
-                                answer={this.props.allAs[(index)].title}
+                                question={this.props.allQs[questionIndex].title}
+                                answer={this.props.allAs[answerIndex].title}
                                 showBackdrop={this.showBackground}
                                 hideBackdrop={this.hideBackground}
                             />
                         </div>
                     </td>);
-                index++;
+                questionIndex++;
             }
             //Create the parent and add the children
             table.push(<tr>{children}</tr>)

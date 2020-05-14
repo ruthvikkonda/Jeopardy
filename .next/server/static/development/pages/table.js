@@ -547,9 +547,9 @@ export default ({ showBackground, title = 'Ruthvik Konda' }) => (
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
@@ -577,32 +577,25 @@ var SampleQ =
 function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(SampleQ, _Component);
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(SampleQ, null, [{
-    key: "getInitialProps",
-    value: function getInitialProps(_ref) {
-      var _ref$query = _ref.query,
-          amount = _ref$query.amount,
-          question = _ref$query.question,
-          answer = _ref$query.answer;
-      return {
-        specAmt: amount,
-        specQ: question,
-        specA: answer
-      };
-    }
-  }]);
-
   function SampleQ(props) {
     var _this;
 
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, SampleQ);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__["default"])(SampleQ).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(SampleQ).call(this, props));
     _this.state = {
       showQuestion: false,
       // tracks visibility of first modal (the question modal)
-      showFeedback: false // tracks visibility of second modal (the feedback modal)
+      showFeedback: false,
+      // tracks visibility of second modal (the feedback modal)
+      userAnswer: '' // represents what the user answered for the question
 
+    };
+
+    _this.handleInput = function (input) {
+      _this.setState({
+        userAnswer: input
+      });
     };
 
     _this.handleShow = function () {
@@ -648,7 +641,7 @@ function (_Component) {
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(SampleQ, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(SampleQ, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -666,8 +659,13 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Title, {
         id: "example-custom-modal-styling-title"
       }, "Question")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6___default.a.Body, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, this.props.question), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_userInput_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        handleInput: this.handleInput,
         handleClick: this.submitForm
-      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_wrongAnswer__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })))), "/* I use toUpperCase() to perform a case sensitive comparison*/", this.state.userAnswer.toUpperCase() === this.props.answer.toUpperCase() ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_correctAnswer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        showModal: this.state.showFeedback,
+        handleHide: this.closeFeedback,
+        amntMoney: this.props.amount
+      }) : react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_feedback_wrongAnswer__WEBPACK_IMPORTED_MODULE_10__["default"], {
         showModal: this.state.showFeedback,
         handleHide: this.closeFeedback,
         amntMoney: this.props.amount
@@ -723,9 +721,17 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(UserInput, _Component);
 
   function UserInput(props) {
+    var _this;
+
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, UserInput);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(UserInput).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(UserInput).call(this, props));
+
+    _this.handleChange = function (event) {
+      _this.props.handleInput(event.target.value);
+    };
+
+    return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(UserInput, [{
@@ -743,7 +749,8 @@ function (_Component) {
         sm: 10
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6___default.a.Control, {
         type: "text",
-        placeholder: "Enter Here"
+        placeholder: "Enter Here",
+        onChange: this.handleChange
       }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_9___default.a, {
         variant: "primary",
         onClick: this.props.handleClick
@@ -3022,20 +3029,24 @@ function (_Component) {
       }
 
       table.push(react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("thead", null, " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", null, " ", cats, " "), " "));
-      var index = 0; // Outer loop to create parent
+      var questionIndex = 0; // Outer loop to create parent
 
       for (var _i = 1; _i < 6; _i++) {
         var children = []; //Inner loop to create children
 
         for (var j = 1; j < 7; j++) {
+          /* I load in questions organized by $ value so answers don't correspond to same index
+             So I use the id of the current question to identify its appropriate answer
+          */
+          var answerIndex = _this.props.allQs[questionIndex].id - 1;
           children.push(react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_question_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
             amount: _i,
-            question: _this.props.allQs[index].title,
-            answer: _this.props.allAs[index].title,
+            question: _this.props.allQs[questionIndex].title,
+            answer: _this.props.allAs[answerIndex].title,
             showBackdrop: _this.showBackground,
             hideBackdrop: _this.hideBackground
           }))));
-          index++;
+          questionIndex++;
         } //Create the parent and add the children
 
 

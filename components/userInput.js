@@ -8,6 +8,10 @@ import Button from 'react-bootstrap/Button';
 class UserInput extends Component {
     constructor(props) {
         super(props);
+
+        this.handleChange = (event) => {
+            this.props.handleInput(event.target.value);
+        }
     }
 
     render() {
@@ -18,7 +22,7 @@ class UserInput extends Component {
                         Answer
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control type="text" placeholder="Enter Here" />
+                        <Form.Control type="text" placeholder="Enter Here" onChange={this.handleChange}/>
                     </Col>
                 </Form.Group>
                 <div>

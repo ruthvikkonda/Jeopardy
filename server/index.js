@@ -26,7 +26,7 @@ app
                 console.log("Connected");
                 con.query("SELECT * FROM categories WHERE themes_id = 1; " +
                     "SELECT id, title FROM questions WHERE categories_id < 7 ORDER BY value, categories_id; " +
-                    "SELECT questions_id, title FROM answers",
+                    "SELECT questions_id, title FROM answers WHERE questions_id <= 30",
                     function (err, result) {
                     if (err) {
                         throw err;

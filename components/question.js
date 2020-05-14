@@ -7,16 +7,17 @@ import CorrectAnswer from "./feedback/correctAnswer";
 import WrongAnswer from "./feedback/wrongAnswer";
 
 class SampleQ extends Component {
-    static getInitialProps({query: {amount, question, answer}}) {
-        return {specAmt: amount, specQ: question, specA: answer}
-    }
-    
     constructor(props) {
         super(props);
 
         this.state = {
             showQuestion: false, // tracks visibility of first modal (the question modal)
             showFeedback: false, // tracks visibility of second modal (the feedback modal)
+            userAnswer: '', // represents what the user answered for the question
+        };
+
+        this.handleInput = (input) => {
+            this.setState({userAnswer: input});
         };
 
         this.handleShow = () => {
@@ -30,7 +31,7 @@ class SampleQ extends Component {
             this.props.hideBackdrop();
         };
 
-        this.submitForm = event => {
+        this.submitForm = (event) => {
             event.preventDefault();
 
             this.props.hideBackdrop(); // take down stars backdrop
@@ -73,21 +74,28 @@ class SampleQ extends Component {
                         </p>
                         <div>
                             <UserInput
+                                handleInput={this.handleInput}
                                 handleClick={this.submitForm}
                             />
                         </div>
                     </Modal.Body>
                 </Modal>
-                {/* correct answer scenario and then wrong answer scenario (display modals) (ternary operator) */
-                /* don't use if else. maybe create parent modal component and then extend it to both feedback*/}
 
-                {/* rendering modal components here so I should compare whether user answered correctly here
-                so pass user input value from UserInput back to here and check if it matches specA*/}
-                <WrongAnswer
-                    showModal={this.state.showFeedback}
-                    handleHide={this.closeFeedback}
-                    amntMoney={this.props.amount}
-                />
+                /* I use toUpperCase() to perform a case sensitive comparison*/
+                {
+                    this.state.userAnswer.toUpperCase() === this.props.answer.toUpperCase() ?
+                    <CorrectAnswer
+                        showModal={this.state.showFeedback}
+                        handleHide={this.closeFeedback}
+                        amntMoney={this.props.amount}
+                    />
+                    :
+                    <WrongAnswer
+                        showModal={this.state.showFeedback}
+                        handleHide={this.closeFeedback}
+                        amntMoney={this.props.amount}
+                    />
+                }
             </>
         );
     }

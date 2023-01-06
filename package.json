@@ -18,7 +18,7 @@
     "i": "^0.3.6",
     "jquery": "^3.4.1",
     "mysql": "^2.16.0",
-    "next": "^8.0.4-canary.21",
+    "next": "^13.1.1",
     "node-sass": "^4.13.1",
     "npm": "^6.13.7",
     "react": "^16.8.5",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "css-loader": "^1.0.1",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
